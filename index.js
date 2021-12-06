@@ -1,10 +1,4 @@
 let notes = [
-	{
-		id: new Date(),
-		title: 'Sample Note',
-		body: 'This is a description for our sample note',
-		bgColor: 'pink'
-	}
 ]
 
 const createElement = (tag, classes = []) => {
@@ -25,9 +19,9 @@ const createNoteView = (note) => {
 	const bodyP = createElement('p', ['body']);
 	bodyP.innerHTML = note.body;
 	const editButton = createElement('button', ['edit']);
-	editButton.innerHTML = 'Edit Note';
+	editButton.innerHTML = 'Edit';
 	const deleteButton = createElement('button', ['delete']);
-	deleteButton.innerHTML = 'Delete Note';
+	deleteButton.innerHTML = 'Delete';
 
 	textDiv.append(titleP)
 	textDiv.append(bodyP)
@@ -45,9 +39,9 @@ const cancelEdit = (noteDiv) => {
 	const bodyP = noteDiv.querySelector('p.body');
 	bodyP.contentEditable = false;
 	const editButton = noteDiv.querySelector('button.edit');
-	editButton.innerHTML = 'Edit Note';
+	editButton.innerHTML = 'Edit';
 	const deleteButton = noteDiv.querySelector('button.delete');
-	deleteButton.innerHTML = 'Delete Note';
+	deleteButton.innerHTML = 'Delete';
 	const note = notes.find(note => note.id == noteDiv.id);
 	titleP.innerHTML = note.title;
 	bodyP.innerHTML = note.body;
@@ -63,9 +57,9 @@ const editNote = (noteDiv, editSave = false) => {
 	bodyP.contentEditable = true;
 
 	const editButton = noteDiv.querySelector('button.edit');
-	editButton.innerHTML = 'Save Note';
+	editButton.innerHTML = 'Save';
 	const deleteButton = noteDiv.querySelector('button.delete');
-	deleteButton.innerHTML = 'Canacel Edit';
+	deleteButton.innerHTML = 'Cancel';
 	deleteButton.onclick = () => cancelEdit(noteDiv);
 	editButton.onclick = () => editNote(noteDiv, true);
 
@@ -73,8 +67,8 @@ const editNote = (noteDiv, editSave = false) => {
 		const note = notes.find(note => note.id == noteDiv.id);
 		note.title = titleP.innerText.trim();
 		note.body = bodyP.innerText.trim();
-		deleteButton.innerHTML = 'Delete Note';
-		editButton.innerHTML = 'Edit Note';
+		deleteButton.innerHTML = 'Delete';
+		editButton.innerHTML = 'Edit';
 		titleP.contentEditable = false;
 		bodyP.contentEditable = false;
 		editButton.onclick = () => editNote(noteDiv);

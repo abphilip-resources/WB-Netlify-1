@@ -4,6 +4,9 @@
 	max-width: 75%;
 	margin: auto;
 }
+h2 {
+	color: #fff;
+}
 .note {
 	margin-top: 16px;
 	display: flex;
@@ -44,4 +47,7 @@ button, select {
 }
 .edit, select {
 	background: #339933;
+}
+body {
+	background: #10101A ;
 }
