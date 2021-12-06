@@ -12,14 +12,15 @@
 	margin-bottom: 16px;
 }
 .text {
-	background: #CCCCCC;
+	background: #DDDDDD;
 	padding: 16px;
-	border-radius: 4px;
-	width: calc(100% - 250px);
+	border-radius: 6px;
+	margin-right: 10px;
+	width: 70%;
 }
 input {
 	height: 32px;
-	border: 1px solid #CCCCCC;
+	border: 1px solid #DDDDDD;
 	padding: 0 8px;
 	border-radius: 6px;
 	margin-bottom: 16px;
@@ -47,9 +48,9 @@ button, select {
 }
 body {
 	background-color: #00000A;
-	background-image: radial-gradient(#2993AB89 0.6px, #00000A 0.6px);
+	background-image: radial-gradient(#1ac3f750 0.5px, #00000A 0.5px);
 	background-size: 12px 12px;
 }
 h2 {
-	color: #CCCCCC;
+	color: #DDDDDD;
 }

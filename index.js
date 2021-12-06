@@ -2,6 +2,7 @@ let notes = [
 ]
 
 const createElement = (tag, classes = []) => {
+	console.log('createElement');
 	const element = document.createElement(tag);
 	classes.forEach(cl => {
 		element.classList.add(cl);
@@ -10,6 +11,7 @@ const createElement = (tag, classes = []) => {
 }
 
 const createNoteView = (note) => {
+	console.log('createNoteView');
 	const noteDiv = createElement('div', ['note']);
 	noteDiv.id = note.id;
 	const textDiv = createElement('div', ['text']);
@@ -34,6 +36,7 @@ const createNoteView = (note) => {
 }
 
 const cancelEdit = (noteDiv) => {
+	console.log('cancelEdit');
 	const titleP = noteDiv.querySelector('b.title');
 	titleP.contentEditable = false;
 	const bodyP = noteDiv.querySelector('p.body');
@@ -50,6 +53,7 @@ const cancelEdit = (noteDiv) => {
 }
 
 const editNote = (noteDiv, editSave = false) => {
+	console.log('editNote');
 	const titleP = noteDiv.querySelector('b.title');
 	titleP.contentEditable = true;
 	titleP.focus();
@@ -64,7 +68,9 @@ const editNote = (noteDiv, editSave = false) => {
 	editButton.onclick = () => editNote(noteDiv, true);
 
 	if (editSave) {
+		console.log('editSave');
 		const note = notes.find(note => note.id == noteDiv.id);
+		console.log(notes);
 		note.title = titleP.innerText.trim();
 		note.body = bodyP.innerText.trim();
 		deleteButton.innerHTML = 'Delete';
@@ -77,6 +83,7 @@ const editNote = (noteDiv, editSave = false) => {
 }
 
 const saveNote = () => {
+	console.log('saveNote');
 	const titleInput = document.querySelector('input#title');
 	const bodyInput = document.querySelector('input#body');
 	const bgColorInput = document.querySelector('select');
@@ -84,14 +91,17 @@ const saveNote = () => {
 	const note = {
 		id, title: titleInput.value, body: bodyInput.value, bgColor: bgColorInput.value
 	}
+	notes.push(note);
+	console.log(notes);
 	const noteDiv = createNoteView(note);
 	notesDiv.prepend(noteDiv);
 	titleInput.value = '';
 	bodyInput.value = '';
-	bgColorInput.value = '';
+	bgColorInput.value = 'Select Color';
 }
 
 const deleteNote = (noteDiv) => {
+	console.log('deleteNote');
 	noteDiv.remove();
 	notes = notes.filter(note => note.id != noteDiv.id);
 }
