@@ -1,11 +1,7 @@
 #notes {
-	border: 1px solid #ccc;
 	padding: 16px;
 	max-width: 75%;
 	margin: auto;
-}
-h2 {
-	color: #fff;
 }
 .note {
 	margin-top: 16px;
@@ -16,31 +12,32 @@ h2 {
 	margin-bottom: 16px;
 }
 .text {
-	background: #ffccff;
+	background: #CCCCCC;
 	padding: 16px;
 	border-radius: 4px;
 	width: calc(100% - 250px);
 }
 input {
 	height: 32px;
-	border: 1px solid #ccc;
+	border: 1px solid #CCCCCC;
 	padding: 0 8px;
 	border-radius: 6px;
 	margin-bottom: 16px;
-	width: calc(50% - 152px);
+	margin-right: 8px;
+	width: 30%; 
 }
 button, select {
 	height: 32px;
-	margin-left: 8px;
+	margin-right: 4px;
 	outline: none;
 	border: none;
 	border-radius: 4px;
 	font-weight: bold;
 	padding: 4px 16px;
-	color: #fff;
+	color: #FFFFFF;
 }
 .add {
-	background: #3399ff;
+	background: #3399FF;
 }
 .delete {
 	background: red;
@@ -49,5 +46,10 @@ button, select {
 	background: #339933;
 }
 body {
-	background: #10101A ;
+	background-color: #00000A;
+	background-image: radial-gradient(#2993AB89 0.6px, #00000A 0.6px);
+	background-size: 12px 12px;
+}
+h2 {
+	color: #CCCCCC;
 }
