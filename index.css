@@ -12,7 +12,7 @@
 	margin-bottom: 16px;
 }
 .text {
-	background: #DDDDDD;
+	background: #EEEEEE;
 	padding: 16px;
 	border-radius: 6px;
 	margin-right: 10px;
@@ -20,13 +20,14 @@
 }
 input {
 	height: 32px;
-	border: 1px solid #DDDDDD;
+	border: 1px solid #EEEEEE;
 	padding: 0 8px;
 	border-radius: 6px;
 	margin-bottom: 16px;
 	margin-right: 8px;
 	width: 30%; 
-	font-family: 'Gilroy'
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
 }
 button, select {
 	height: 32px;
@@ -35,25 +36,29 @@ button, select {
 	border: none;
 	border-radius: 4px;
 	padding: 4px 16px;
-	color: #DDDDDD;
-	font-family: 'Gilroy';
-	font-weight: bold;
+	color: #EEEEEE;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+
 }
 .add {
-	background: #3399FF;
+	background: #2277DD;
 }
 .delete {
-	background: red;
+	background: #DD0000;
 }
 .edit, select {
-	background: #339933;
+	background: #227722;
 }
 body {
 	background-color: #00000A;
-	background-image: radial-gradient(#1AC3F755 0.7px, #00000A 0.7px);
+	background-image: radial-gradient(#41bde260 0.7px, #00000A 0.7px);
 	background-size: 11px 11px;
-	font-family: 'Gilroy';
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
 }
 h2 {
-	color: #DDDDDD;
+	font-family: 'Readex Pro', sans-serif;
+	color: #EEEEEE;
+	font-weight: 700;
 }
