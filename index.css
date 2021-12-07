@@ -26,6 +26,7 @@ input {
 	margin-bottom: 16px;
 	margin-right: 8px;
 	width: 30%; 
+	font-family: 'Gilroy'
 }
 button, select {
 	height: 32px;
@@ -33,9 +34,10 @@ button, select {
 	outline: none;
 	border: none;
 	border-radius: 4px;
-	font-weight: bold;
 	padding: 4px 16px;
-	color: #FFFFFF;
+	color: #DDDDDD;
+	font-family: 'Gilroy';
+	font-weight: bold;
 }
 .add {
 	background: #3399FF;
@@ -48,8 +50,9 @@ button, select {
 }
 body {
 	background-color: #00000A;
-	background-image: radial-gradient(#1ac3f750 0.5px, #00000A 0.5px);
-	background-size: 12px 12px;
+	background-image: radial-gradient(#1AC3F755 0.7px, #00000A 0.7px);
+	background-size: 11px 11px;
+	font-family: 'Gilroy';
 }
 h2 {
 	color: #DDDDDD;
